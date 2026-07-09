@@ -3,6 +3,17 @@ pipeline {
 
     stages {
 
+        stage('Docker Test') 
+        {
+            steps {
+                sh '''
+                whoami
+                docker --version
+                docker ps
+                '''
+            }
+        }
+
         stage('Install Docker')
         {
             steps {
