@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Install Docker')
+        {
+            steps {
+                sh '''
+                sudo yum install -y docker
+                sudo systemctl enable docker
+                sudo systemctl start docker
+                docker --version
+                '''
+            }
+        }
+    }
+}
