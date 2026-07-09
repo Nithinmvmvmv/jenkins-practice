@@ -17,7 +17,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                echo 'Welcome stage 3.......'
+                echo 'Welcome stage 3...'
+                echo 'Thank you'
             }
         }
     }
